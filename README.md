@@ -60,9 +60,9 @@ This is a full-stack web application built with the **MERN stack** (MongoDB, Exp
 
 ### Create .env file
 
-3.  a. PORT=8000
-    b. MONGO_URL=your_mongo_connection_string
-    C. SECRET_KEY=your_jwt_secret
+3.  - PORT=8000
+    - MONGO_URL=your_mongo_connection_string
+    - SECRET_KEY=your_jwt_secret
 
 ### Start the backend
 
@@ -85,7 +85,7 @@ This is a full-stack web application built with the **MERN stack** (MongoDB, Exp
 
 ### Technologies Used
 
-Front-End: React, Tailwind
-Backend: Express, Node.js, MongoDB, Mongoose
-Authentication: JWT
-CSV/XLSX Parsing: XLSX package
+- Front-End: React, Tailwind
+- Backend: Express, Node.js, MongoDB, Mongoose
+- Authentication: JWT
+- CSV/XLSX Parsing: XLSX package
