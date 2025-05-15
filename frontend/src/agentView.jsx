@@ -12,7 +12,7 @@ const AgentView = () => {
     const fetchAgentTasks = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8000/api/tasks/${agentId}`,
+          `https://cstech-assignment.onrender.com/api/tasks/${agentId}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,

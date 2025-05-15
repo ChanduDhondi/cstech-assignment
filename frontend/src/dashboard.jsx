@@ -4,7 +4,7 @@ import { io } from "socket.io-client";
 import { useEffect } from "react";
 import axios from "axios";
 
-const socket = io("http://localhost:8000");
+const socket = io("https://cstech-assignment.onrender.com");
 
 const Dashboard = () => {
   const [agents, setAgents] = useState([]);
@@ -12,9 +12,14 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchAgents = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/api/getAgents", {
-          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-        });
+        const res = await axios.get(
+          "https://cstech-assignment.onrender.com/api/getAgents",
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }
+        );
         console.log(res.data.allAgents);
         setAgents(res.data.allAgents);
       } catch (err) {

@@ -19,7 +19,7 @@ const AddAgent = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/createAgent",
+        "https://cstech-assignment.onrender.com/api/createAgent",
         form,
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },

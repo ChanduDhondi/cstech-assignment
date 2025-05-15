@@ -14,7 +14,7 @@ const RegisterForm = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/registerUser",
+        "https://cstech-assignment.onrender.com/api/registerUser",
         {
           email,
           password,

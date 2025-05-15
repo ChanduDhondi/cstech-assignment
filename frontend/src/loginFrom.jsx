@@ -13,10 +13,13 @@ const LoginForm = ({ setIsAuthenticated }) => {
     setError("");
 
     try {
-      const response = await axios.post("http://localhost:8000/api/loginUser", {
-        email,
-        password,
-      });
+      const response = await axios.post(
+        "https://cstech-assignment.onrender.com/api/loginUser",
+        {
+          email,
+          password,
+        }
+      );
       localStorage.setItem("token", response.data.token);
       setIsAuthenticated(true);
       navigate("/dashboard");

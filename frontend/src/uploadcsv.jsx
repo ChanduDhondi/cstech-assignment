@@ -23,7 +23,7 @@ const UploadCSV = () => {
     formData.append("user", user.id);
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/upload",
+        "https://cstech-assignment.onrender.com/api/upload",
         formData,
         {
           headers: {

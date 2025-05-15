@@ -13,7 +13,8 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "*",
+    origin: ["https://cstech-assignment-chandudhondi.netlify.app"],
+    methods: ["GET", "POST"],
   },
 });
 
@@ -32,7 +33,13 @@ mongoose
   .then(() => console.log("Connected to MongoDB"));
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://cstech-assignment-chandudhondi.netlify.app"],
+    methods: ["GET", "POST"],
+    credentials: true,
+  })
+);
 
 app.use("/api", appRoute);
 
